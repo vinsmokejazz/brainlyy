@@ -1,4 +1,4 @@
-import { Schema } from "mongoose";
+import { model,Schema } from "mongoose";
 import mongoose from "mongoose";
 import { MONGO_URL } from "./config";
 
@@ -16,6 +16,7 @@ const ContentSchema = new Schema({
   title: String,
   link: String,
   tags: { type: mongoose.Types.ObjectId, ref: 'Tag' },
+  type: String,
   userId: { type: mongoose.Types.ObjectId, ref: 'User', required: true }
 })
 
@@ -26,6 +27,6 @@ const LinkSchema = new Schema({
 })
 
 
-export const UserModel = mongoose.model("User", UserSchema);
-export const ContentModel = mongoose.model("Content", ContentSchema);
-export const LinkModel = mongoose.model("Link", LinkSchema);
+export const UserModel = model("User",UserSchema);
+export const ContentModel = model("Content", ContentSchema);
+export const LinkModel = model("Links", LinkSchema);
