@@ -1,1 +1,1 @@
-A paltform to save your important links from different social media platforms
+A paltform to save your important links from different social media platforms and also save bookmarks 
